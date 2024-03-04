@@ -1,0 +1,36 @@
+Hooks in react :
+
+
+
+1) useState(<initialState.)
+
+[count,setCount]=useState(0)
+
+setCount(count+1) -> allows to update thestate, 
+
+Note:
+
+setState=> is an asynchronous function, read the state in the useEffect hook.
+
+
+Arrowfunction with the set state method:
+
+(normal function differs from arrow function with the use of this, arguments and new keywords)
+
+setState method can accept :
+1> an object as parameter 
+2>  a function => which accepts a previous state and props, return a object.
+
+
+
+stale updates:
+
+setState(count+1)
+setState(count+1)
+the second may be called on the state, which is not updated yet as the setState function is asynchronous.
+
+. However, when a function is used, React guarantees that the previous state and the props are the most recent ones when the function is executed
+
+
+
+
